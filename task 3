@@ -1,0 +1,34 @@
+while True:
+    age_input = input("Please enter your age (or type 'quit' to exit): ")
+
+    if age_input.lower() == 'quit':
+        break
+
+    try:
+        age = int(age_input)
+    except ValueError:
+        print("Invalid input. Please enter a valid age or type 'quit' to exit.")
+        continue
+
+    if age < 0:
+        print("You are not even born yet!")
+    elif age >= 100:
+        print("Wow, you've lived a long life!")
+    elif age >= 65:
+        print("Congratulations on reaching retirement age!")
+    elif age >= 50:
+        print("You're in your fifties! You're halfway to a hundred!")
+    elif age >= 40:
+        print("You're over the hill. But don't worry, life begins at forty!")
+    elif age >= 30 and age % 2 == 0:
+        print("You're in your thirties and you're even! How lucky!")
+    elif age >= 30:
+        print("You're in your thirties! It's time to start making some serious life decisions.")
+    elif age >= 21:
+        print("Congratulations! You're legally allowed to drink in the United States!")
+    elif age == 18:
+        print("You've reached legal adulthood! Time to take on the world.")
+    elif age > 13:
+        print("You're a teenager! The world is your oyster.")
+    else:
+        print("You qualify for the kiddie discount! Make the most of it while you can!")
